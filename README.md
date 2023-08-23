@@ -10,7 +10,7 @@
 - [X] Initialize the project with Vite
 - [X] Add linter for TypeScript + React
 - [ ] Add styles of the TodoMVC
-- [ ] List all Todo's
+- [X] List all Todo's
 - [ ] Being able to delete a todo
 - [ ] Mark todo as completed
 - [ ] Footer
