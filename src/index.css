@@ -8,7 +8,9 @@
   color-scheme: dark;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
 }
@@ -25,4 +27,8 @@ body {
 div {
   display: grid;
   place-items: center;
+}
+
+.completed {
+  text-decoration: line-through;
 }

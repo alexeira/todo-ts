@@ -7,7 +7,7 @@ interface Props extends TodoType {
 
 export const Todo: React.FC<Props> = ({ id, text, completed, onRemoveTodo, onCompleted }) => {
   return (
-    <div>
+    <div className="todo">
       <input
         checked={completed}
         type="checkbox"
@@ -15,7 +15,7 @@ export const Todo: React.FC<Props> = ({ id, text, completed, onRemoveTodo, onCom
           onCompleted(id, completed)
         }}
       />
-      <label>{text}</label>
+      <label className={completed ? 'completed' : ''}>{text}</label>
       <button onClick={() => onRemoveTodo(id)}>X</button>
     </div>
   )
