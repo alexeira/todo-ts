@@ -33,20 +33,19 @@ export default function App() {
     setTodos(newTodos)
   }
 
-  function handleSubmit(event: FormEvent) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const newId = todos?.slice(-1)[0]?.id + 1 || 1
 
-    const newTodo = [
-      ...todos,
-      {
-        id: newId,
-        text: todo,
-        completed: false
-      }
-    ]
+    const newTodo = {
+      id: newId,
+      text: todo,
+      completed: false
+    }
 
-    setTodos(newTodo)
+    const newTodos = [...todos, newTodo]
+
+    setTodos(newTodos)
     setTodo('')
   }
 
